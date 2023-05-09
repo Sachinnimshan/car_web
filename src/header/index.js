@@ -14,36 +14,39 @@ import { SiteLogo } from "../images/images.styled";
 import { SiteLogoDark, SiteLogoLight } from "../images";
 import useResponsive from "../hooks/useResponsive";
 import { MenuIcon } from "../icons";
+import { PRIMARY_COLOR } from "../styles/theme";
 
 function Header() {
   const isMobile = useResponsive();
-  const [showScroll, setShowScroll] = useState(false);
+  const [scrolledDown, setScrolledDown] = useState(false);
 
-  const checkScrollTop = () => {
-    if (!showScroll && window.pageYOffset > 40) {
-      setShowScroll(true);
-    } else if (showScroll && window.pageYOffset <= 40) {
-      setShowScroll(false);
+  const checkScrolledDown = () => {
+    if (!scrolledDown && window.pageYOffset > 50) {
+      setScrolledDown(true);
+    } else if (scrolledDown && window.pageYOffset <= 50) {
+      setScrolledDown(false);
     }
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", checkScrollTop);
+    window.addEventListener("scroll", checkScrolledDown);
   }, [window.pageYOffset]);
 
   return (
-    <HeaderContainer mobile={isMobile} scrolledDown={showScroll}>
-      <SiteLogo src={SiteLogoDark} />
+    <HeaderContainer mobile={isMobile} scrolledDown={scrolledDown}>
+      <SiteLogo src={scrolledDown ? SiteLogoDark : SiteLogoLight} />
       {!isMobile && (
         <HeaderRight>
           <HeaderLinkContainer>
             {navLinks?.map((item) => (
-              <HeaderLink>{item.title}</HeaderLink>
+              <HeaderLink scrolledDown={scrolledDown}>{item.title}</HeaderLink>
             ))}
           </HeaderLinkContainer>
           <SocialContainer>
             {socialIcons?.map((icon) => (
-              <SocialIcon header>{icon?.icon}</SocialIcon>
+              <SocialIcon header color={scrolledDown && PRIMARY_COLOR}>
+                {icon?.icon}
+              </SocialIcon>
             ))}
           </SocialContainer>
         </HeaderRight>

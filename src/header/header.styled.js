@@ -2,11 +2,10 @@ import styled from "@emotion/styled";
 import {
   BG_COLOR,
   FONT_DARK,
-  FONT_LIGHT,
   PADDING_DESKTOP,
   PADDING_MOBILE,
+  PRIMARY_COLOR,
   SECONDARY_COLOR,
-  WHITE_COLOR,
 } from "../styles/theme";
 
 export const HeaderContainer = styled("div")`
@@ -14,14 +13,15 @@ export const HeaderContainer = styled("div")`
   align-items: center;
   justify-content: space-between;
   padding: ${(props) =>
-    props.mobile ? `1.5rem ${PADDING_MOBILE}` : `1.5rem ${PADDING_DESKTOP}`};
+    props.mobile ? `1.25rem ${PADDING_MOBILE}` : `1.25rem ${PADDING_DESKTOP}`};
   gap: 2rem;
   top: 0;
   left: 0;
   right: 0;
   position: fixed;
   z-index: 1000;
-  background-color: ${(props)=> props.scrolledDown && BG_COLOR}
+  background-color: ${(props) => props.scrolledDown && BG_COLOR};
+  transition: all ease-in-out 0.5s;
 `;
 
 export const HeaderRight = styled("div")`
@@ -31,22 +31,25 @@ export const HeaderRight = styled("div")`
 `;
 
 export const HeaderLink = styled("span")`
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 500;
   padding: 0.25rem 0;
-  color: ${BG_COLOR};
-  border-bottom: 3px solid transparent;
+  color: ${(props) =>
+    props.scrolledDown ? `${PRIMARY_COLOR}` : `${BG_COLOR}`};
+  border-bottom: 4px solid transparent;
   white-space: nowrap;
   cursor: pointer;
+  transition: all ease-in-out 0.4s;
   &:hover {
-    border-bottom: 3px solid ${SECONDARY_COLOR};
+    border-bottom: 4px solid ${SECONDARY_COLOR};
+    transition: all ease-in-out 0.4s;
   }
 `;
 
 export const HeaderLinkContainer = styled("div")`
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
 `;
 
 export const SocialContainer = styled("div")`
@@ -57,7 +60,7 @@ export const SocialContainer = styled("div")`
 
 export const SocialIcon = styled("div")`
   font-size: 18px;
-  color: ${(props) => (props.header ? `${FONT_DARK}` : `${BG_COLOR}`)};
+  color: ${(props) => props.color || BG_COLOR};
   background-color: ${(props) => props.footer && FONT_DARK};
   padding: ${(props) => props.padding && "10px"};
   border-radius: 50%;

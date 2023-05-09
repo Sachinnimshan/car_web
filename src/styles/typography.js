@@ -1,11 +1,5 @@
 import styled from "@emotion/styled";
-import {
-    BG_COLOR,
-  FONT_DARK,
-  PRIMARY_COLOR,
-  SECONDARY_COLOR,
-  WHITE_COLOR,
-} from "./theme";
+import { BG_COLOR, FONT_DARK, PRIMARY_COLOR, SECONDARY_COLOR } from "./theme";
 
 export const SectionHeader = styled("span")`
   color: ${SECONDARY_COLOR};
@@ -36,4 +30,21 @@ export const HomePageHeader = styled("span")`
   font-weight: 500;
   color: ${BG_COLOR};
   font-size: 2.5rem;
+`;
+
+export const ButtonText = styled("span")`
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+`;
+
+export const ButtonIcon = styled("div")`
+  color: ${(props) => props.color || PRIMARY_COLOR};
+  background-color: ${(props) => props.bgrColor || BG_COLOR};
+  font-size: 1.75rem;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
 `;

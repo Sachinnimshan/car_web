@@ -9,7 +9,6 @@ import {
   SECONDARY_COLOR,
   WHITE_COLOR,
 } from "../styles/theme";
-import { CgEditBlackPoint } from "react-icons/cg";
 
 export const FooterContainer = styled("div")`
   background-color: ${PRIMARY_COLOR};
@@ -31,6 +30,7 @@ export const FooterColumn = styled("div")`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  max-width: 300px;
 `;
 
 export const ColumnHeader = styled("span")`
@@ -77,10 +77,12 @@ export const ContactInfoHeader = styled("span")`
   color: ${BG_COLOR};
 `;
 
-export const ContactInfoDesc = styled("span")`
+export const ContactInfoDesc = styled("p")`
   font-size: 14px;
   font-weight: 400;
+  line-height: 1.5rem;
   color: ${FONT_LIGHT};
+  text-align: justify;
 `;
 
 export const CopyRightContainer = styled("div")`
