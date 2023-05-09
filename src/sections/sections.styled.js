@@ -127,8 +127,19 @@ export const StatValue = styled("span")`
 //////////////////ABOUT//////////////////////////////////////////////////////////\
 
 export const AboutContainer = styled("div")`
-
+  padding: ${(props) =>
+    props.mobile ? `1rem ${PADDING_MOBILE}` : `1rem ${PADDING_DESKTOP}`};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
 `;
 
+export const AboutRight = styled("div")`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+`;
 
 //////////////////ABOUT//////////////////////////////////////////////////////////

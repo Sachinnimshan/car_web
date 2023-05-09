@@ -3,7 +3,8 @@ import { BG_COLOR, FONT_DARK, PRIMARY_COLOR, SECONDARY_COLOR } from "./theme";
 
 export const SectionHeader = styled("span")`
   color: ${SECONDARY_COLOR};
-  font-size: 2rem;
+  font-size: calc(16px + 1.5vw);
+  text-transform: uppercase;
 `;
 
 export const SectionTitle = styled("span")`
@@ -16,13 +17,14 @@ export const SectionTitle = styled("span")`
 export const SectionSubTitle = styled("span")`
   font-weight: 400;
   font-size: calc(16px + 1vw);
-  color: ${(props) => props.color || FONT_DARK};
+  color: ${(props) => props.color || PRIMARY_COLOR};
 `;
 
 export const SectionText = styled("p")`
   font-size: calc(16px + 0.09vw);
   color: ${FONT_DARK};
   font-weight: 400;
+  text-align: justify;
 `;
 
 export const HomePageHeader = styled("span")`
@@ -46,4 +48,10 @@ export const ButtonIcon = styled("div")`
   padding: 5px;
   display: flex;
   align-items: center;
+`;
+
+export const SectionTitleContainer = styled("div")`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
 `;
