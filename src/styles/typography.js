@@ -8,28 +8,27 @@ export const SectionHeader = styled("span")`
 
 export const SectionTitle = styled("span")`
   font-weight: 700;
-  font-size: 4rem;
+  font-size: calc(16px + 4vw);
   color: ${(props) => props.color};
   text-transform: uppercase;
 `;
 
 export const SectionSubTitle = styled("span")`
   font-weight: 400;
-  font-size: 2rem;
-  color: ${(props) => props.color};
-  text-transform: uppercase;
+  font-size: calc(16px + 1vw);
+  color: ${(props) => props.color || FONT_DARK};
 `;
 
-export const SectionText = styled("span")`
-  font-size: 15px;
+export const SectionText = styled("p")`
+  font-size: calc(16px + 0.09vw);
   color: ${FONT_DARK};
-  font-weight: 500;
+  font-weight: 400;
 `;
 
 export const HomePageHeader = styled("span")`
   font-weight: 500;
   color: ${BG_COLOR};
-  font-size: 2.5rem;
+  font-size: calc(16px + 2vw);
 `;
 
 export const ButtonText = styled("span")`

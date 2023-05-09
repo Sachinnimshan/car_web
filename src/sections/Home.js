@@ -12,7 +12,7 @@ import {
   HomeContainer,
   HomeInfoContainer,
   TypeHightlight,
-} from "./screens.styled";
+} from "./sections.styled";
 
 function Home() {
   const isMobile = useResponsive();

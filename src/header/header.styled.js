@@ -6,6 +6,7 @@ import {
   PADDING_MOBILE,
   PRIMARY_COLOR,
   SECONDARY_COLOR,
+  WHITE_COLOR,
 } from "../styles/theme";
 
 export const HeaderContainer = styled("div")`
@@ -20,7 +21,7 @@ export const HeaderContainer = styled("div")`
   right: 0;
   position: fixed;
   z-index: 1000;
-  background-color: ${(props) => props.scrolledDown && BG_COLOR};
+  background-color: ${(props) => props.scrolledDown && WHITE_COLOR};
   transition: all ease-in-out 0.5s;
 `;
 
