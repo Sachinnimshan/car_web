@@ -19,7 +19,7 @@ import { PRIMARY_COLOR } from "../styles/theme";
 function Header() {
   const isMobile = useResponsive();
   const [scrolledDown, setScrolledDown] = useState(false);
-
+ 
   const checkScrolledDown = () => {
     if (!scrolledDown && window.pageYOffset > 50) {
       setScrolledDown(true);
@@ -30,7 +30,7 @@ function Header() {
 
   useEffect(() => {
     window.addEventListener("scroll", checkScrolledDown);
-  }, [window.pageYOffset]);
+  }, [window.pageYOffset, scrolledDown]);
 
   return (
     <HeaderContainer mobile={isMobile} scrolledDown={scrolledDown}>

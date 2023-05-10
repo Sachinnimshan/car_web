@@ -18,7 +18,7 @@ import {
 import { SiteLogo } from "../images/images.styled";
 import { SiteLogoLight } from "../images";
 import useResponsive from "../hooks/useResponsive";
-import { BG_COLOR, FONT_LIGHT } from "../styles/theme";
+import { BG_COLOR } from "../styles/theme";
 
 function Footer() {
   const isMobile = useResponsive();

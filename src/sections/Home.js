@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "../common/button";
 import useResponsive from "../hooks/useResponsive";
 import { CarBanner } from "../images";
 import { HomeBanner } from "../images/images.styled";
