@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Footer from "../footer";
 import Header from "../header";
 import useResponsive from "../hooks/useResponsive";
@@ -10,6 +10,7 @@ import Speed from "./Speed";
 import Variations from "./Variations";
 
 function MainLayout({ mobile }) {
+  const sectionRef = useRef(null);
   return (
     <MainLayoutContainer>
       <Header mobile={mobile} />

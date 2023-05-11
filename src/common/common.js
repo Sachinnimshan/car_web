@@ -65,7 +65,7 @@ export const engineData = [
       },
       {
         title: "Top speed",
-        value: "420",
+        value: "420kmph",
       },
       {
         title: "0-100KMPH",
@@ -73,21 +73,21 @@ export const engineData = [
       },
     ],
   },
-  // {
-  //   title: "TOP AUTOMATIC W16",
-  //   engSpec: [
-  //     {
-  //       title: "Max power",
-  //       value: "1600bhp",
-  //     },
-  //     {
-  //       title: "Top speed",
-  //       value: "480",
-  //     },
-  //     {
-  //       title: "0-100KMPH",
-  //       value: "2 s",
-  //     },
-  //   ],
-  // },
+  {
+    title: "TOP AUTOMATIC W16",
+    engSpec: [
+      {
+        title: "Max power",
+        value: "1600bhp",
+      },
+      {
+        title: "Top speed",
+        value: "480kmph",
+      },
+      {
+        title: "0-100KMPH",
+        value: "2.0 s",
+      },
+    ],
+  },
 ];

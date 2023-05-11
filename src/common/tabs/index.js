@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Tab, TabContainer, TabHeader, TabPanel } from "./tabs.styled";
 
-function Tabs({ data, children }) {
-  const [activeTab, setActiveTab] = useState(data[0]);
+function Tabs({ data, children, activeTab, setActiveTab }) {
   return (
     <TabContainer>
       <TabHeader>

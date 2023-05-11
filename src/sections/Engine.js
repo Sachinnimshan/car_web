@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { engineData } from "../common/common";
 import Tabs from "../common/tabs";
 import { EngineImg } from "../images";
@@ -20,6 +20,7 @@ import {
 } from "./sections.styled";
 
 function Engine({ mobile }) {
+  const [activeTab, setActiveTab] = useState(engineData[0]);
   return (
     <EngineContainer mobile={mobile}>
       <EngineLeft>
@@ -32,16 +33,18 @@ function Engine({ mobile }) {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
           condimentum suscipit nisi, eu pellentesque tortor viverra ut.
         </SectionText>
-        <Tabs data={engineData}>
+        <Tabs
+          data={engineData}
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+        >
           <EngineSpecContainer>
-            {engineData?.map((item) =>
-              item?.engSpec?.map((stat) => (
-                <EngineSpecItem>
-                  <EngineSpecValue>{stat.value}</EngineSpecValue>
-                  <EngineSpecTitle>{stat?.title}</EngineSpecTitle>
-                </EngineSpecItem>
-              ))
-            )}
+            {activeTab?.engSpec?.map((stat) => (
+              <EngineSpecItem>
+                <EngineSpecValue>{stat.value}</EngineSpecValue>
+                <EngineSpecTitle>{stat?.title}</EngineSpecTitle>
+              </EngineSpecItem>
+            ))}
           </EngineSpecContainer>
         </Tabs>
       </EngineLeft>

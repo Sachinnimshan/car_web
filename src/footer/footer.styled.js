@@ -14,7 +14,6 @@ export const FooterContainer = styled("div")`
   background-color: ${PRIMARY_COLOR};
   display: flex;
   flex-direction: column;
-  
 `;
 
 export const FooterContent = styled("div")`
@@ -87,8 +86,10 @@ export const ContactInfoDesc = styled("p")`
 
 export const CopyRightContainer = styled("div")`
   padding: 2rem 0;
-  font-size: 13px;
+  font-size: 12.5px;
   text-align: center;
   border-top: 1px solid ${FONT_DARK};
   color: ${FONT_LIGHT};
+  padding: ${(props) =>
+    props.mobile ? `1.25rem ${PADDING_MOBILE}` : `1.25rem ${PADDING_DESKTOP}`};
 `;

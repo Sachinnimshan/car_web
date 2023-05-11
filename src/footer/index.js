@@ -65,7 +65,7 @@ function Footer({ mobile }) {
           </SocialContainer>
         </FooterColumn>
       </FooterContent>
-      <CopyRightContainer>
+      <CopyRightContainer mobile={mobile}>
         © 2023 Wheels. Design & Developed by Sachin Nimshan.
       </CopyRightContainer>
     </FooterContainer>

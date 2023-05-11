@@ -1,5 +1,10 @@
 import styled from "@emotion/styled";
-import { BG_COLOR, FONT_DARK, SECONDARY_COLOR } from "../../styles/theme";
+import {
+  BG_COLOR,
+  FONT_DARK,
+  FONT_LIGHT,
+  SECONDARY_COLOR,
+} from "../../styles/theme";
 
 export const TabContainer = styled("div")`
   display: flex;
@@ -10,14 +15,14 @@ export const TabContainer = styled("div")`
 export const TabHeader = styled("div")`
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 3rem;
 `;
 
 export const Tab = styled("span")`
   font-size: calc(16px + 0.3vw);
   padding-bottom: 1rem;
   font-weight: 400;
-  color: "#3B3B3B";
+  color: ${(props) => (props.active ? "#3B3B3B" : FONT_LIGHT)};
   cursor: pointer;
   transition: all ease-in-out 0.5s;
   border-bottom: ${(props) =>
