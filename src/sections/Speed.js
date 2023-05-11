@@ -13,10 +13,10 @@ import {
   StatValue,
 } from "./sections.styled";
 
-function Speed() {
+function Speed({mobile}) {
   const isMobile = useResponsive();
   return (
-    <SpeedContainer mobile={isMobile}>
+    <SpeedContainer mobile={mobile}>
       <SectionTitle>MIND BLOWING SPEED</SectionTitle>
       <SectionText>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In gravida
@@ -27,12 +27,12 @@ function Speed() {
           <StatValue>1.9s</StatValue>
           <SectionSubTitle>0-60mph</SectionSubTitle>
         </Speedbar>
-        <RedDivider />
+        {!mobile && (<RedDivider />)}
         <Speedbar>
           <StatValue>+250mph</StatValue>
           <SectionSubTitle>Top speed</SectionSubTitle>
         </Speedbar>
-        <RedDivider />
+        {!mobile && (<RedDivider />)}
         <Speedbar>
           <StatValue>620mi</StatValue>
           <SectionSubTitle>Range</SectionSubTitle>

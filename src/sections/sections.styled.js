@@ -17,7 +17,7 @@ export const MainLayoutContainer = styled("div")`
 
 export const HomeContainer = styled("div")`
   display: flex;
-  background-image: url(/images/home_banner.jpg);
+  background-image: url("/images/home_page.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -31,8 +31,20 @@ export const HomeContainer = styled("div")`
     props.mobile ? `1rem ${PADDING_MOBILE}` : `1rem ${PADDING_DESKTOP}`};
 `;
 
+export const carAnimation = keyframes`
+ from {
+    right: -5%;
+  }
+  to {
+    right: 0%;
+  }
+`;
+
 export const HeroBanner = styled("div")`
   z-index: 5;
+  animation-name: ${carAnimation};
+  animation-duration: 1s;
+  position: relative;
 `;
 
 export const TypeHightlight = styled("span")`
@@ -51,7 +63,7 @@ export const FadeText = styled("h1")`
   margin-top: 7rem;
 `;
 
-const fogAnimation = keyframes`
+export const fogAnimation = keyframes`
 0% {
   background-position: -200% center;
 }
@@ -66,7 +78,7 @@ export const Fog = styled("div")`
   bottom: 0;
   width: 100%;
   height: 100%;
-  background: url(/images/fog.png) repeat-x;
+  background: url("/images/fog.png") repeat-x;
   background-size: 200% auto;
   background-position: 0 bottom;
   animation: ${fogAnimation} 15s;
@@ -143,3 +155,86 @@ export const AboutRight = styled("div")`
 `;
 
 //////////////////ABOUT//////////////////////////////////////////////////////////
+
+//////////////////VARIATIONS//////////////////////////////////////////////////////////
+
+export const VariationsContainer = styled("div")`
+  display: flex;
+  flex-direction: column;
+  padding: ${(props) =>
+    props.mobile ? `2rem ${PADDING_MOBILE}` : `2rem ${PADDING_DESKTOP}`};
+`;
+
+export const VariationColorCar = styled("img")`
+  margin-top: 2rem;
+`;
+
+export const ColorSelector = styled("div")`
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1rem;
+`;
+
+export const ColorDot = styled("div")`
+  background-color: ${(props) => props.bgrColor};
+  border-radius: 50%;
+  width: calc(1rem + 1vw);
+  height: calc(1rem + 1vw);
+  cursor: pointer;
+`;
+
+//////////////////VARIATIONS//////////////////////////////////////////////////////////
+
+//////////////////ENGINE//////////////////////////////////////////////////////////
+
+export const EngineContainer = styled("div")`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: ${(props) =>
+    props.mobile ? `2rem ${PADDING_MOBILE}` : `2rem ${PADDING_DESKTOP}`};
+`;
+
+export const EngineLeft = styled("div")`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+`;
+
+export const EngineImage = styled("img")`
+  max-width: 400px;
+  width: 100%;
+  height: 100%;
+`;
+
+export const EngineSpecContainer = styled("div")`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: calc(2rem + 1vw);
+  padding: 2rem 0;
+`;
+
+export const EngineSpecItem = styled("div")`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+`;
+
+export const EngineSpecValue = styled("span")`
+  font-size: calc(16px + 1.5vw);
+  font-weight: 700;
+  color: "#3B3B3B";
+`;
+
+export const EngineSpecTitle = styled("span")`
+  font-size: calc(16px + 0.2vw);
+  color: "#3B3B3B";
+  text-transform: uppercase;
+`;
+
+//////////////////ENGINE//////////////////////////////////////////////////////////

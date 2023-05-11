@@ -7,12 +7,12 @@ const useResponsive = () => {
   });
 
   useEffect(() => {
-    if (typeof window !== undefined && window.innerWidth < 1000) {
+    if (typeof window !== undefined && window.innerWidth <= 1200) {
       setState({ ...state, mobile: true });
     }
     const handleResize = () => {
       const currentWidth = window.innerWidth;
-      const isMobile = currentWidth < 1000;
+      const isMobile = currentWidth <= 1200;
       setState({
         width: window.innerWidth,
         mobile: isMobile,

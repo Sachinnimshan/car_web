@@ -5,6 +5,7 @@ export const SectionHeader = styled("span")`
   color: ${SECONDARY_COLOR};
   font-size: calc(16px + 1.5vw);
   text-transform: uppercase;
+  display: inline-block;
 `;
 
 export const SectionTitle = styled("span")`
@@ -12,19 +13,33 @@ export const SectionTitle = styled("span")`
   font-size: calc(16px + 4vw);
   color: ${(props) => props.color};
   text-transform: uppercase;
+  display: inline-block;
 `;
 
 export const SectionSubTitle = styled("span")`
   font-weight: 400;
-  font-size: calc(16px + 1vw);
-  color: ${(props) => props.color || PRIMARY_COLOR};
+  font-size: calc(16px + 0.75vw);
+  color: ${(props) => props.color || "#333333"};
 `;
 
 export const SectionText = styled("p")`
-  font-size: calc(16px + 0.09vw);
+  font-size: calc(16px + 0.075vw);
   color: ${FONT_DARK};
   font-weight: 400;
   text-align: justify;
+  line-height: 2rem;
+`;
+
+export const SectionTitleContainer = styled("div")`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+`;
+
+export const SectionTitleTop = styled("div")`
+  display: flex;
+  flex-direction: column;
 `;
 
 export const HomePageHeader = styled("span")`
@@ -48,10 +63,4 @@ export const ButtonIcon = styled("div")`
   padding: 5px;
   display: flex;
   align-items: center;
-`;
-
-export const SectionTitleContainer = styled("div")`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 2rem;
 `;

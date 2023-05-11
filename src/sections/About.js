@@ -1,5 +1,4 @@
 import React from "react";
-import useResponsive from "../hooks/useResponsive";
 import { AboutImg } from "../images";
 import { AboutBanner } from "../images/images.styled";
 import {
@@ -8,20 +7,23 @@ import {
   SectionText,
   SectionTitle,
   SectionTitleContainer,
+  SectionTitleTop,
 } from "../styles/typography";
 import { AboutContainer, AboutRight } from "./sections.styled";
 
-function About() {
-  const isMobile = useResponsive();
+function About({mobile}) {
   return (
-    <AboutContainer mobile={isMobile}>
+    <AboutContainer mobile={mobile}>
       <AboutBanner src={AboutImg} />
       <AboutRight>
         <SectionTitleContainer>
-          <SectionHeader>About</SectionHeader>
-          <SectionTitle>WHEELS ZQ6</SectionTitle>
+          <SectionTitleTop>
+            <SectionHeader>About</SectionHeader>
+            <SectionTitle>WHEELS ZQ6</SectionTitle>
+          </SectionTitleTop>
+          <SectionSubTitle>Discover Our World</SectionSubTitle>
         </SectionTitleContainer>
-        <SectionSubTitle>Discover Our World</SectionSubTitle>
+
         <SectionText>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           sodales justo in nisi mollis aliquam. Integer congue fringilla cursus.

@@ -54,3 +54,40 @@ export const contactData = [
     icon: <LocationIcon />,
   },
 ];
+
+export const engineData = [
+  {
+    title: "TOP PETROL W11T",
+    engSpec: [
+      {
+        title: "Max power",
+        value: "1479bhp",
+      },
+      {
+        title: "Top speed",
+        value: "420",
+      },
+      {
+        title: "0-100KMPH",
+        value: "2.5 s",
+      },
+    ],
+  },
+  // {
+  //   title: "TOP AUTOMATIC W16",
+  //   engSpec: [
+  //     {
+  //       title: "Max power",
+  //       value: "1600bhp",
+  //     },
+  //     {
+  //       title: "Top speed",
+  //       value: "480",
+  //     },
+  //     {
+  //       title: "0-100KMPH",
+  //       value: "2 s",
+  //     },
+  //   ],
+  // },
+];

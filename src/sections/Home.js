@@ -1,6 +1,5 @@
 import React from "react";
-import useResponsive from "../hooks/useResponsive";
-import { CarBanner } from "../images";
+import { CarImageRed } from "../images";
 import { HomeBanner } from "../images/images.styled";
 import { BG_COLOR } from "../styles/theme";
 import { HomePageHeader, SectionTitle } from "../styles/typography";
@@ -13,10 +12,9 @@ import {
   TypeHightlight,
 } from "./sections.styled";
 
-function Home() {
-  const isMobile = useResponsive();
+function Home({mobile}) {
   return (
-    <HomeContainer mobile={isMobile}>
+    <HomeContainer mobile={mobile}>
       <HomeInfoContainer>
         <HomePageHeader>New Collection</HomePageHeader>
         <SectionTitle color={BG_COLOR}>
@@ -26,7 +24,7 @@ function Home() {
       </HomeInfoContainer>
       <Fog />
       <HeroBanner>
-        <HomeBanner src={CarBanner} />
+        <HomeBanner src={CarImageRed} />
       </HeroBanner>
     </HomeContainer>
   );

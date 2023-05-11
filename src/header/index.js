@@ -1,25 +1,18 @@
 import React, { useEffect, useState } from "react";
 import "./header.styled";
-import {
-  HeaderContainer,
-  HeaderLinkContainer,
-  HeaderLink,
-  SocialContainer,
-  SocialIcon,
-  HeaderRight,
-  MenuContainer,
-} from "./header.styled";
-import { navLinks, socialIcons } from "../common/common";
+import { Backdrop, HeaderContainer, MenuContainer } from "./header.styled";
 import { SiteLogo } from "../images/images.styled";
 import { SiteLogoDark, SiteLogoLight } from "../images";
-import useResponsive from "../hooks/useResponsive";
+import Navigation from "./Navigation";
 import { MenuIcon } from "../icons";
-import { PRIMARY_COLOR } from "../styles/theme";
 
-function Header() {
-  const isMobile = useResponsive();
+function Header({ mobile }) {
   const [scrolledDown, setScrolledDown] = useState(false);
- 
+  const [showMenu, setShowMenu] = useState(false);
+
+  const handleOpen = () => setShowMenu(!showMenu);
+  const handleClose = () => setShowMenu(false);
+
   const checkScrolledDown = () => {
     if (!scrolledDown && window.pageYOffset > 50) {
       setScrolledDown(true);
@@ -32,27 +25,35 @@ function Header() {
     window.addEventListener("scroll", checkScrolledDown);
   }, [window.pageYOffset, scrolledDown]);
 
+  useEffect(() => {
+    if (showMenu && !mobile) {
+      handleClose();
+    }
+  }, [mobile]);
+
   return (
-    <HeaderContainer mobile={isMobile} scrolledDown={scrolledDown}>
-      <SiteLogo src={scrolledDown ? SiteLogoDark : SiteLogoLight} />
-      {!isMobile && (
-        <HeaderRight>
-          <HeaderLinkContainer>
-            {navLinks?.map((item) => (
-              <HeaderLink scrolledDown={scrolledDown}>{item.title}</HeaderLink>
-            ))}
-          </HeaderLinkContainer>
-          <SocialContainer>
-            {socialIcons?.map((icon) => (
-              <SocialIcon header color={scrolledDown && PRIMARY_COLOR}>
-                {icon?.icon}
-              </SocialIcon>
-            ))}
-          </SocialContainer>
-        </HeaderRight>
+    <HeaderContainer mobile={mobile} scrolledDown={scrolledDown && !showMenu}>
+      {!showMenu && (
+        <SiteLogo src={scrolledDown ? SiteLogoDark : SiteLogoLight} />
       )}
-      {isMobile && (
-        <MenuContainer>
+      {!mobile && (
+        <Navigation
+          scrolledDown={scrolledDown}
+          showMenu={showMenu}
+          onClose={handleClose}
+        />
+      )}
+      {showMenu && (
+        <Backdrop onClick={handleClose}>
+          <Navigation
+            showMenu={showMenu}
+            scrolledDown={scrolledDown}
+            onClose={handleClose}
+          />
+        </Backdrop>
+      )}
+      {mobile && !showMenu && (
+        <MenuContainer onClick={handleOpen}>
           <MenuIcon />
         </MenuContainer>
       )}

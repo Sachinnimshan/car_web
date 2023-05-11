@@ -17,14 +17,12 @@ import {
 } from "./footer.styled";
 import { SiteLogo } from "../images/images.styled";
 import { SiteLogoLight } from "../images";
-import useResponsive from "../hooks/useResponsive";
 import { BG_COLOR } from "../styles/theme";
 
-function Footer() {
-  const isMobile = useResponsive();
+function Footer({ mobile }) {
   return (
     <FooterContainer>
-      <FooterContent mobile={isMobile}>
+      <FooterContent mobile={mobile}>
         <FooterColumn>
           <ColumnHeader>About Us</ColumnHeader>
           <SiteLogo src={SiteLogoLight} />
@@ -37,7 +35,7 @@ function Footer() {
         <FooterColumn>
           <ColumnHeader>Useful Links</ColumnHeader>
           {navLinks?.map((item) => (
-            <FooterLink>
+            <FooterLink key={item.title}>
               <PointIcon />
               {item.title}
             </FooterLink>
@@ -46,7 +44,7 @@ function Footer() {
         <FooterColumn>
           <ColumnHeader>Contact Info</ColumnHeader>
           {contactData?.map((item) => (
-            <ContactItem>
+            <ContactItem key={item.title}>
               <ContactIcon>{item.icon}</ContactIcon>
               <ContactInfo>
                 <ContactInfoHeader>{item.title}</ContactInfoHeader>
@@ -60,7 +58,7 @@ function Footer() {
           <ColumnHeader>Follow us</ColumnHeader>
           <SocialContainer>
             {socialIcons?.map((icon) => (
-              <SocialIcon footer padding color={BG_COLOR}>
+              <SocialIcon footer padding color={BG_COLOR} key={icon.title}>
                 {icon.icon}
               </SocialIcon>
             ))}
