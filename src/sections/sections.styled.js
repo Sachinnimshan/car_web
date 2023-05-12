@@ -4,6 +4,7 @@ import {
   BG_COLOR,
   PADDING_DESKTOP,
   PADDING_MOBILE,
+  PRIMARY_COLOR,
   SECONDARY_COLOR,
   WHITE_COLOR,
 } from "../styles/theme";
@@ -145,13 +146,99 @@ export const AboutContainer = styled("div")`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
 `;
 
-export const AboutRight = styled("div")`
+export const AboutTopSection = styled("div")`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+`;
+
+export const AboutTopRight = styled("div")`
   display: flex;
   flex-direction: column;
   flex: 1;
+`;
+
+export const AboutBottomContainer = styled("div")`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+`;
+
+export const AboutBottomLeft = styled("div")`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const AboutRedBanner = styled("div")`
+  background-color: ${SECONDARY_COLOR};
+  max-width: 425px;
+  height: 100%;
+  color: ${WHITE_COLOR};
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
+`;
+
+export const AboutRedBannerText = styled("span")`
+  font-weight: 600;
+  color: ${WHITE_COLOR};
+  font-size: ${(props) =>
+    props.small ? "calc(1rem + 0.2vw)" : "calc(2rem + 1vw)"};
+`;
+
+export const AboutVideoImg = styled("div")`
+  width: 100%;
+  max-height: 425px;
+  height: 100%;
+  height: 500px;
+  display: flex;
+  background-image: url(${(props) => props.image});
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const PlayButton = styled("div")`
+  font-size: 3rem;
+  color: ${PRIMARY_COLOR};
+  background-color: ${WHITE_COLOR};
+  border-radius: 50%;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+  &:hover {
+    transition: all ease-in-out 0.3s;
+    color: ${SECONDARY_COLOR};
+  }
+`;
+
+export const AboutBottomRight = styled("div")`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+`;
+
+export const AboutSlideContainer = styled("div")``;
+
+export const SlideShowImg = styled("img")`
+  width: 100%;
+`;
+
+export const AboutInfoBottom = styled("div")`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem 2rem;
 `;
 
 //////////////////ABOUT//////////////////////////////////////////////////////////
@@ -205,7 +292,7 @@ export const EngineLeft = styled("div")`
 `;
 
 export const EngineImage = styled("img")`
-  max-width: 400px;
+  max-width: 450px;
   width: 100%;
   height: 100%;
 `;

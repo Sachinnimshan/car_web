@@ -15,7 +15,7 @@ export const TabContainer = styled("div")`
 export const TabHeader = styled("div")`
   display: flex;
   flex-direction: row;
-  gap: 3rem;
+  gap: 2rem;
 `;
 
 export const Tab = styled("span")`

@@ -1,5 +1,6 @@
 import { FaFacebookF, FaTwitter, FaYoutube } from "react-icons/fa";
 import { LocationIcon, MailIcon, PhoneIcon } from "../icons";
+import { CarSlideImg1, CarSlideImg2, CarSlideImg3 } from "../images";
 
 export const socialIcons = [
   {
@@ -91,3 +92,19 @@ export const engineData = [
     ],
   },
 ];
+
+
+export const carSlideData = [
+  {
+    title: "Racing Car1",
+    image: CarSlideImg1
+  },
+  {
+    title: "Racing Car2",
+    image: CarSlideImg2
+  },
+  {
+    title: "Racing Car3",
+    image: CarSlideImg3
+  }
+]

@@ -48,7 +48,7 @@ function Engine({ mobile }) {
           </EngineSpecContainer>
         </Tabs>
       </EngineLeft>
-      <EngineImage src={EngineImg} />
+      <EngineImage src={EngineImg} alt="Engine"/>
     </EngineContainer>
   );
 }

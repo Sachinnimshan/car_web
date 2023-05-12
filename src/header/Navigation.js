@@ -46,7 +46,7 @@ function Navigation({ scrolledDown, showMenu, onClose }) {
         </SocialContainer>
         {showMenu && (
           <SidebarImage>
-            <HomeBanner src={CarImageRed} />
+            <HomeBanner src={CarImageRed} alt="Wheels"/>
           </SidebarImage>
         )}
       </NavItemContainer>

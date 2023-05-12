@@ -59,7 +59,7 @@ function Variations({mobile}) {
           />
         ))}
       </ColorSelector>
-      <VariationColorCar src={selectedColor} />
+      <VariationColorCar src={selectedColor} alt="Wheels"/>
     </VariationsContainer>
   );
 }

@@ -34,7 +34,7 @@ function Header({ mobile }) {
   return (
     <HeaderContainer mobile={mobile} scrolledDown={scrolledDown && !showMenu}>
       {!showMenu && (
-        <SiteLogo src={scrolledDown ? SiteLogoDark : SiteLogoLight} />
+        <SiteLogo src={scrolledDown ? SiteLogoDark : SiteLogoLight} alt="Wheels"/>
       )}
       {!mobile && (
         <Navigation

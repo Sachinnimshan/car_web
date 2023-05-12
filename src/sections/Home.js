@@ -24,7 +24,7 @@ function Home({mobile}) {
       </HomeInfoContainer>
       <Fog />
       <HeroBanner>
-        <HomeBanner src={CarImageRed} />
+        <HomeBanner src={CarImageRed} alt="Wheels"/>
       </HeroBanner>
     </HomeContainer>
   );
