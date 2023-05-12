@@ -2,6 +2,8 @@ import styled from "@emotion/styled";
 import { keyframes } from "@emotion/react";
 import {
   BG_COLOR,
+  FONT_DARK,
+  FONT_LIGHT,
   PADDING_DESKTOP,
   PADDING_MOBILE,
   PRIMARY_COLOR,
@@ -194,9 +196,10 @@ export const AboutRedBannerText = styled("span")`
 
 export const AboutVideoImg = styled("div")`
   width: 100%;
-  max-height: 425px;
+  min-height: 400px;
+  flex-grow: 1;
   height: 100%;
-  height: 500px;
+  max-width: 500px;
   display: flex;
   background-image: url(${(props) => props.image});
   background-size: cover;
@@ -227,10 +230,41 @@ export const AboutBottomRight = styled("div")`
   flex: 1;
 `;
 
-export const AboutSlideContainer = styled("div")``;
+export const AboutSlideContainer = styled("div")`
+  position: relative;
+`;
 
 export const SlideShowImg = styled("img")`
   width: 100%;
+  flex-grow: 1;
+  position: relative;
+`;
+
+export const SlideShowButtonContainer = styled("div")`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+`;
+
+export const SlideShowBtn = styled("div")`
+  color: ${PRIMARY_COLOR};
+  font-size: 1.5rem;
+  background-color: ${WHITE_COLOR};
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  transition: all ease-in-out 0.3s;
+  border: 2px solid transparent;
+  &:hover {
+    color: ${SECONDARY_COLOR};
+    transition: all ease-in-out 0.3s;
+    border: 2px solid ${SECONDARY_COLOR};
+  }
 `;
 
 export const AboutInfoBottom = styled("div")`
@@ -273,6 +307,36 @@ export const ColorDot = styled("div")`
 `;
 
 //////////////////VARIATIONS//////////////////////////////////////////////////////////
+
+//////////////////TECHNICAL//////////////////////////////////////////////////////////
+
+export const TechnicalContainer = styled("div")`
+  background-color: ${BG_COLOR};
+  padding: ${(props) =>
+    props.mobile ? `2rem ${PADDING_MOBILE}` : `2rem ${PADDING_DESKTOP}`};
+`;
+
+export const TechnicalItemContainer = styled("div")`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+`;
+
+export const TechnicalItem = styled("div")`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: ${(props)=> props.borderBottom && `1px solid ${FONT_LIGHT}`};
+`;
+
+export const TechnicalItemText = styled("span")`
+  font-size: calc(1rem + 0.1vw);
+  color: ${FONT_DARK};
+`;
+
+//////////////////TECHNICAL//////////////////////////////////////////////////////////
 
 //////////////////ENGINE//////////////////////////////////////////////////////////
 

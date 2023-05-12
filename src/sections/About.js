@@ -1,6 +1,6 @@
 import React from "react";
 import { carSlideData } from "../common/common";
-import { PlayIcon } from "../icons";
+import { ArrowNextIcon, ArrowPrevIcon, PlayIcon } from "../icons";
 import { AboutImg, CarSlideImg1, CarSlideImg2, CarSlideImg3 } from "../images";
 import { AboutBanner } from "../images/images.styled";
 import {
@@ -25,6 +25,8 @@ import {
   AboutTopSection,
   AboutVideoImg,
   PlayButton,
+  SlideShowBtn,
+  SlideShowButtonContainer,
   SlideShowImg,
 } from "./sections.styled";
 
@@ -71,6 +73,14 @@ function About({ mobile }) {
         <AboutBottomRight>
           <AboutSlideContainer>
             <SlideShowImg src={carSlideData[0].image} />
+            <SlideShowButtonContainer>
+              <SlideShowBtn>
+                <ArrowPrevIcon />
+              </SlideShowBtn>
+              <SlideShowBtn>
+                <ArrowNextIcon />
+              </SlideShowBtn>
+            </SlideShowButtonContainer>
           </AboutSlideContainer>
           <AboutInfoBottom>
             <SectionText>

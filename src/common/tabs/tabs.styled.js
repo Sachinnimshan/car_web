@@ -15,6 +15,7 @@ export const TabContainer = styled("div")`
 export const TabHeader = styled("div")`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 2rem;
 `;
 
