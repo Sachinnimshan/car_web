@@ -24,12 +24,12 @@ export const HomeContainer = styled("div")`
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  justify-content: flex-end;
+  justify-content: ${(props) => (props.mobile ? "space-between" : "flex-end")};
   align-items: center;
   flex-direction: column;
   position: relative;
   z-index: 3;
-  height: 97vh;
+  height: ${(props) => (props.mobile ? "70vh" : "97vh")};
   padding: ${(props) =>
     props.mobile ? `1rem ${PADDING_MOBILE}` : `1rem ${PADDING_DESKTOP}`};
 `;
@@ -97,6 +97,7 @@ export const HomeInfoContainer = styled("div")`
   align-items: center;
   text-align: center;
   z-index: 3;
+  margin-top: ${(props) => props.mobile && "6rem"};
 `;
 //////////////////Home//////////////////////////////////////////////////////////
 

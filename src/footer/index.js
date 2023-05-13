@@ -54,7 +54,6 @@ function Footer({ mobile }) {
           ))}
         </FooterColumn>
         <FooterColumn>
-          <ColumnHeader>Subscribe</ColumnHeader>
           <ColumnHeader>Follow us</ColumnHeader>
           <SocialContainer>
             {socialIcons?.map((icon) => (

@@ -1,3 +1,4 @@
+import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
 import { carAnimation } from "../sections/sections.styled";
 import {
@@ -49,20 +50,30 @@ export const Backdrop = styled("div")`
   z-index: 1222;
 `;
 
+const navbarAnimation = keyframes`
+from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
+  }
+`;
+
 export const NavItemContainer = styled("div")`
   display: flex;
-  align-items: center;
   gap: ${(props) => (props.showMenu ? "2rem" : "3rem")};
   flex-direction: ${(props) => props.showMenu && "column"};
   position: ${(props) => props.showMenu && "fixed"};
   top: 0;
-  right: 0;
+  left: 0;
   height: ${(props) => props.showMenu && "100vh"};
   background-color: ${(props) => props.showMenu && WHITE_COLOR};
-  padding: ${(props) => props.showMenu && "1.25rem"};
+  padding: ${(props) => props.showMenu && "1.25rem 2rem"};
   box-shadow: ${(props) =>
     props.showMenu &&
     "0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.05)"};
+  animation-name: ${navbarAnimation};
+  animation-duration: 0.5s;
 `;
 
 export const NavItem = styled("span")`
@@ -92,6 +103,7 @@ export const SidebarHeader = styled("div")`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 2rem;
   width: 100%;
 `;
 

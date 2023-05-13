@@ -12,19 +12,20 @@ import {
   TypeHightlight,
 } from "./sections.styled";
 
-function Home({mobile}) {
+function Home({ mobile }) {
   return (
     <HomeContainer mobile={mobile}>
-      <HomeInfoContainer>
+      <HomeInfoContainer mobile={mobile}>
         <HomePageHeader>New Collection</HomePageHeader>
         <SectionTitle color={BG_COLOR}>
           Check out new wheels <TypeHightlight>ZQ6</TypeHightlight>
         </SectionTitle>
         <FadeText>Roadster</FadeText>
+        <Fog />
       </HomeInfoContainer>
-      <Fog />
+
       <HeroBanner>
-        <HomeBanner src={CarImageRed} alt="Wheels"/>
+        <HomeBanner src={CarImageRed} alt="Wheels" />
       </HeroBanner>
     </HomeContainer>
   );
