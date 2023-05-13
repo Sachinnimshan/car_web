@@ -12,7 +12,6 @@ export const SlideShowButtonContainer = styled("div")`
   position: absolute;
   right: 5%;
   bottom: 5%;
-  z-index: 90000;
 `;
 
 export const SlideShowBtn = styled("div")`

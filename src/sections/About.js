@@ -71,7 +71,7 @@ function About({ mobile }) {
             <SectionSubTitle>Discover Our World</SectionSubTitle>
           </SectionTitleContainer>
 
-          <SectionText>
+          <SectionText marginBottom>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             sodales justo in nisi mollis aliquam. Integer congue fringilla
             cursus. In mi ipsum, consequat non venenatis ut, commodo sed dolor.

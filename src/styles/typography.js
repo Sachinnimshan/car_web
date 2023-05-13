@@ -28,6 +28,7 @@ export const SectionText = styled("p")`
   text-align: justify;
   line-height: 2rem;
   font-style: ${(props) => props.italic && "italic"};
+  margin-bottom: ${(props)=> props.marginBottom && "1rem"};
 `;
 
 export const SectionTitleContainer = styled("div")`
