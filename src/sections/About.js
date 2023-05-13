@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { carSlideData } from "../common/common";
-import { ArrowNextIcon, ArrowPrevIcon, PlayIcon } from "../icons";
+import SlideControls from "../common/slidecontrols";
+import { PlayIcon } from "../icons";
 import { AboutImg, CarSlideImg1, CarSlideImg2, CarSlideImg3 } from "../images";
 import { AboutBanner } from "../images/images.styled";
 import {
@@ -19,18 +20,44 @@ import {
   AboutInfoBottom,
   AboutRedBanner,
   AboutRedBannerText,
-  AboutRight,
   AboutSlideContainer,
   AboutTopRight,
   AboutTopSection,
   AboutVideoImg,
   PlayButton,
-  SlideShowBtn,
-  SlideShowButtonContainer,
   SlideShowImg,
 } from "./sections.styled";
 
 function About({ mobile }) {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const autoScroll = true;
+  let slideTimer;
+  let scrollTimer = 3000;
+
+  const handleNext = () => {
+    setCurrentSlide(
+      currentSlide === carSlideData?.length - 1 ? 0 : currentSlide + 1
+    );
+  };
+
+  const handlePrevious = () => {
+    setCurrentSlide(
+      currentSlide === 0 ? carSlideData?.length - 1 : currentSlide - 1
+    );
+  };
+
+  const invokeAutoScroll = () => {
+    slideTimer = setInterval(handleNext, scrollTimer);
+  };
+
+  useEffect(() => {
+    if (autoScroll) {
+      invokeAutoScroll();
+    }
+    return () => {
+      clearInterval(slideTimer);
+    };
+  }, [currentSlide]);
   return (
     <AboutContainer mobile={mobile}>
       <AboutTopSection>
@@ -72,15 +99,19 @@ function About({ mobile }) {
         </AboutBottomLeft>
         <AboutBottomRight>
           <AboutSlideContainer>
-            <SlideShowImg src={carSlideData[0].image} />
-            <SlideShowButtonContainer>
-              <SlideShowBtn>
-                <ArrowPrevIcon />
-              </SlideShowBtn>
-              <SlideShowBtn>
-                <ArrowNextIcon />
-              </SlideShowBtn>
-            </SlideShowButtonContainer>
+            {carSlideData?.map((item, index) => {
+              return (
+                <Fragment key={index}>
+                  {index === currentSlide && (
+                    <SlideShowImg src={carSlideData[index].image} />
+                  )}
+                </Fragment>
+              );
+            })}
+            <SlideControls
+              onClickPrevious={handlePrevious}
+              onClickNext={handleNext}
+            />
           </AboutSlideContainer>
           <AboutInfoBottom>
             <SectionText>

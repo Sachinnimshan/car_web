@@ -238,33 +238,7 @@ export const SlideShowImg = styled("img")`
   width: 100%;
   flex-grow: 1;
   position: relative;
-`;
-
-export const SlideShowButtonContainer = styled("div")`
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  position: absolute;
-  right: 5%;
-  bottom: 5%;
-`;
-
-export const SlideShowBtn = styled("div")`
-  color: ${PRIMARY_COLOR};
-  font-size: 1.5rem;
-  background-color: ${WHITE_COLOR};
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  padding: 10px;
-  transition: all ease-in-out 0.3s;
-  border: 2px solid transparent;
-  &:hover {
-    color: ${SECONDARY_COLOR};
-    transition: all ease-in-out 0.3s;
-    border: 2px solid ${SECONDARY_COLOR};
-  }
+  transition: all ease-in-out 0.5s;
 `;
 
 export const AboutInfoBottom = styled("div")`
@@ -328,7 +302,13 @@ export const TechnicalItem = styled("div")`
   align-items: center;
   justify-content: space-between;
   padding: 6px 0;
-  border-bottom: ${(props)=> props.borderBottom && `1px solid ${FONT_LIGHT}`};
+  border-bottom: ${(props) => props.borderBottom && `1px solid ${FONT_LIGHT}`};
+`;
+
+export const SelectedItemTitle = styled("span")`
+  font-size: calc(1rem + 1vw);
+  font-weight: 700;
+  color: ${PRIMARY_COLOR};
 `;
 
 export const TechnicalItemText = styled("span")`
@@ -389,3 +369,88 @@ export const EngineSpecTitle = styled("span")`
 `;
 
 //////////////////ENGINE//////////////////////////////////////////////////////////
+
+//////////////////TESTIMONIALS//////////////////////////////////////////////////////////
+export const TestimonialsContainer = styled("div")`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  padding: ${(props) =>
+    props.mobile ? `2rem ${PADDING_MOBILE}` : `2rem ${PADDING_DESKTOP}`};
+  background: linear-gradient(
+      0deg,
+      rgba(211, 28, 26, 0.9),
+      rgba(211, 28, 26, 0.9)
+    ),
+    url("/images/testimonials.jpg") center;
+`;
+
+export const TestimonialItemContainer = styled("div")`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem 0;
+  gap: 3rem;
+`;
+
+export const TestimonialItem = styled("div")`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: space-between;
+  transition: all ease-in-out 0.5s;
+`;
+
+export const TestimonialInfoLeft = styled("div")`
+  background-color: ${WHITE_COLOR};
+  border-radius: 50%;
+  display: flex;
+  padding: 15px 5px 5px 10px;
+`;
+
+export const TestimonialProfile = styled("img")`
+  border-radius: 50%;
+  display: flex;
+  width: 100%;
+`;
+
+export const TestimonialCommaContainer = styled("div")`
+  background-color: ${WHITE_COLOR};
+  padding: 20px;
+  position: absolute;
+  border-radius: 50%;
+`;
+
+export const TestimonialCommas = styled("img")`
+  max-height: calc(1.75rem + 1vw);
+  max-width: calc(1.75rem + 1vw);
+`;
+
+export const TestimonialInfoRight = styled("div")`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 600px;
+  width: 100%;
+`;
+
+export const TestimonialAuthorContainer = styled("div")`
+  display: flex;
+  flex-direction: column;
+  color: ${WHITE_COLOR};
+  align-items: flex-start;
+`;
+
+export const TestimonialAuthor = styled("span")`
+  font-weight: 600;
+  font-size: calc(1rem + 0.5vw);
+`;
+
+export const AuthorTitle = styled("span")`
+  font-size: 16px;
+  font-weight: 400;
+`;
+
+//////////////////TESTIMONIALS//////////////////////////////////////////////////////////

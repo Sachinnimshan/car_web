@@ -7,6 +7,7 @@ import {
   SectionTitleContainer,
 } from "../styles/typography";
 import {
+  SelectedItemTitle,
   TechnicalContainer,
   TechnicalItem,
   TechnicalItemContainer,
@@ -26,6 +27,7 @@ function Technical({ mobile }) {
         activeTab={activeTab}
         setActiveTab={setActiveTab}
       >
+        <SelectedItemTitle>{activeTab?.title}</SelectedItemTitle>
         <TechnicalItemContainer>
           {activeTab?.data?.map((stat, index) => (
             <TechnicalItem

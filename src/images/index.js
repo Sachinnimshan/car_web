@@ -9,3 +9,4 @@ export const EngineImg = "/images/racing-car-engine.png";
 export const CarSlideImg1 = "/images/racing-car-1-slide.jpg";
 export const CarSlideImg2 = "/images/racing-car-2-slide.jpg";
 export const CarSlideImg3 = "/images/racing-car-3-slide.jpg";
+export const QuatationMark = "/images/quotation-mark.png";

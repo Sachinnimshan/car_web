@@ -29,7 +29,7 @@ function Navigation({ scrolledDown, showMenu, onClose }) {
         )}
 
         {navLinks?.map((item) => (
-          <NavItem key={item.title} scrolledDown={scrolledDown || showMenu}>
+          <NavItem key={item.title} scrolledDown={scrolledDown || showMenu} >
             {item.title}
           </NavItem>
         ))}

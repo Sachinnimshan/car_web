@@ -3,7 +3,7 @@ import { BG_COLOR, FONT_DARK, PRIMARY_COLOR, SECONDARY_COLOR } from "./theme";
 
 export const SectionHeader = styled("span")`
   color: ${SECONDARY_COLOR};
-  font-size: calc(16px + 1.5vw);
+  font-size: calc(16px + 1.25vw);
   text-transform: uppercase;
   display: inline-block;
 `;
@@ -11,9 +11,8 @@ export const SectionHeader = styled("span")`
 export const SectionTitle = styled("span")`
   font-weight: 700;
   font-size: calc(16px + 4vw);
-  color: ${(props) => props.color};
+  color: ${(props) => props.color || PRIMARY_COLOR};
   text-transform: uppercase;
-  display: inline-block;
 `;
 
 export const SectionSubTitle = styled("span")`
@@ -24,10 +23,11 @@ export const SectionSubTitle = styled("span")`
 
 export const SectionText = styled("p")`
   font-size: calc(16px + 0.075vw);
-  color: ${FONT_DARK};
+  color: ${(props) => props.color || FONT_DARK};
   font-weight: 400;
   text-align: justify;
   line-height: 2rem;
+  font-style: ${(props) => props.italic && "italic"};
 `;
 
 export const SectionTitleContainer = styled("div")`

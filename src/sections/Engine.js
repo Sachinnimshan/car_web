@@ -40,7 +40,7 @@ function Engine({ mobile }) {
         >
           <EngineSpecContainer>
             {activeTab?.engSpec?.map((stat) => (
-              <EngineSpecItem>
+              <EngineSpecItem key={stat.title}>
                 <EngineSpecValue>{stat.value}</EngineSpecValue>
                 <EngineSpecTitle>{stat?.title}</EngineSpecTitle>
               </EngineSpecItem>

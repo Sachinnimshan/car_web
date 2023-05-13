@@ -15,12 +15,14 @@ export const TabContainer = styled("div")`
 export const TabHeader = styled("div")`
   display: flex;
   flex-direction: row;
+  justify-content: ${(props)=> props.mobile && "space-between"};
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: ${(props) => props.mobile ? "1rem" : "2rem"};
+  margin-bottom: 0.75rem;
 `;
 
 export const Tab = styled("span")`
-  font-size: calc(16px + 0.3vw);
+  font-size: calc(16px + 0.1vw);
   padding-bottom: 1rem;
   font-weight: 400;
   color: ${(props) => (props.active ? "#3B3B3B" : FONT_LIGHT)};

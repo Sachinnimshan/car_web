@@ -8,6 +8,7 @@ import Home from "./Home";
 import { MainLayoutContainer } from "./sections.styled";
 import Speed from "./Speed";
 import Technical from "./Technical";
+import Testimonials from "./Testimonials";
 import Variations from "./Variations";
 
 function MainLayout({ mobile }) {
@@ -21,6 +22,7 @@ function MainLayout({ mobile }) {
       <Variations mobile={mobile} />
       <Technical mobile={mobile} />
       <Engine mobile={mobile} />
+      <Testimonials/>
       <Footer mobile={mobile} />
     </MainLayoutContainer>
   );

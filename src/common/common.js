@@ -20,21 +20,27 @@ export const socialIcons = [
 export const navLinks = [
   {
     title: "About",
+    ref: "about",
   },
   {
     title: "Innovative Design",
+    ref: "innovative_design",
   },
   {
     title: "Variations",
+    ref: "variations",
   },
   {
     title: "Specials",
+    ref: "specials",
   },
   {
     title: "Testimonial",
+    ref: "testimonials",
   },
   {
     title: "Find Dealer",
+    ref: "find_dealer",
   },
 ];
 
@@ -274,5 +280,22 @@ export const technicalData = [
         value: "1995",
       },
     ],
+  },
+];
+
+export const testimonialData = [
+  {
+    name: "Dan Kaul",
+    title: "CEO / Founder",
+    image: "/images/person-1.jpg",
+    message:
+      "Phasellus blandit tincidunt nisi nec ultricies. Ut ac condimentum dui. Maecenas sollicitudin magna dolor, eget efficitur metus tristique sed. Mauris sed egestas lorem. Fusce ut volutpat velit, at porta arcu.",
+  },
+  {
+    name: "Saru Matt",
+    title: "Planer & Manager",
+    image: "/images/person-2.jpg",
+    message:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales justo in nisi mollis aliquam. Integer congue fringilla cursus. In mi ipsum, consequat non venenatis ut, commodo sed dolor. Aliquam erat volutpat.",
   },
 ];
