@@ -17,8 +17,8 @@ import {
 
 function Navigation({ scrolledDown, showMenu, onClose }) {
   return (
-    <NavigationContainer>
-      <NavItemContainer showMenu={showMenu}>
+    <NavigationContainer >
+      <NavItemContainer showMenu={showMenu} >
         {showMenu && (
           <SidebarHeader>
             <SiteLogo src={SiteLogoDark} />

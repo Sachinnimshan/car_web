@@ -13,6 +13,15 @@ import {
 
 //////////////////////Navigation///////////////////////////
 
+export const headerShowAnimation = keyframes`
+from {
+    top: -100%;
+  }
+  to {
+    top: 0%;
+  }
+`;
+
 export const HeaderContainer = styled("div")`
   display: flex;
   align-items: center;
@@ -27,6 +36,8 @@ export const HeaderContainer = styled("div")`
   z-index: 1000;
   background-color: ${(props) =>
     (props.scrolledDown && WHITE_COLOR) || "transparent"};
+  animation-name: ${(props) => props.scrolledDown && headerShowAnimation};
+  animation-duration: 0.5s;
   transition: all ease-in-out 0.5s;
   box-shadow: ${(props) =>
     props.scrolledDown &&
@@ -50,12 +61,21 @@ export const Backdrop = styled("div")`
   z-index: 1222;
 `;
 
-const navbarAnimation = keyframes`
+const navbarShowAnimation = keyframes`
 from {
     left: -100%;
   }
   to {
     left: 0%;
+  }
+`;
+
+const navbarHideAnimation = keyframes`
+from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
   }
 `;
 
@@ -72,13 +92,15 @@ export const NavItemContainer = styled("div")`
   box-shadow: ${(props) =>
     props.showMenu &&
     "0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.05)"};
-  animation-name: ${navbarAnimation};
-  animation-duration: 0.5s;
+  animation-name: ${(props) => props.showMenu && navbarShowAnimation};
+  animation-duration: 0.75s;
+  transition: all ease-in-out 0.5s;
 `;
 
 export const NavItem = styled("span")`
   font-size: 15px;
   font-weight: 500;
+  width: fit-content;
   padding: 0.25rem 0;
   color: ${(props) =>
     props.scrolledDown ? `${PRIMARY_COLOR}` : `${BG_COLOR}`};

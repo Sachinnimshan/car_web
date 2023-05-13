@@ -34,7 +34,10 @@ function Header({ mobile }) {
   return (
     <HeaderContainer mobile={mobile} scrolledDown={scrolledDown && !showMenu}>
       {!showMenu && (
-        <SiteLogo src={scrolledDown ? SiteLogoDark : SiteLogoLight} alt="Wheels"/>
+        <SiteLogo
+          src={scrolledDown ? SiteLogoDark : SiteLogoLight}
+          alt="Wheels"
+        />
       )}
       {!mobile && (
         <Navigation
@@ -44,13 +47,11 @@ function Header({ mobile }) {
         />
       )}
       {showMenu && (
-        <Backdrop onClick={handleClose}>
-          <Navigation
-            showMenu={showMenu}
-            scrolledDown={scrolledDown}
-            onClose={handleClose}
-          />
-        </Backdrop>
+        <Navigation
+          showMenu={showMenu}
+          scrolledDown={scrolledDown}
+          onClose={handleClose}
+        />
       )}
       {mobile && !showMenu && (
         <MenuContainer onClick={handleOpen}>
