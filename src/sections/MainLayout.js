@@ -22,7 +22,7 @@ function MainLayout({ mobile }) {
       <Variations mobile={mobile} />
       <Technical mobile={mobile} />
       <Engine mobile={mobile} />
-      <Testimonials/>
+      <Testimonials mobile={mobile} />
       <Footer mobile={mobile} />
     </MainLayoutContainer>
   );

@@ -3,6 +3,7 @@ import {
   BG_COLOR,
   FONT_DARK,
   FONT_LIGHT,
+  PRIMARY_COLOR,
   SECONDARY_COLOR,
 } from "../../styles/theme";
 
@@ -15,9 +16,9 @@ export const TabContainer = styled("div")`
 export const TabHeader = styled("div")`
   display: flex;
   flex-direction: row;
-  justify-content: ${(props)=> props.mobile && "space-between"};
+  justify-content: flex-start;
   flex-wrap: wrap;
-  gap: ${(props) => props.mobile ? "1rem" : "2rem"};
+  gap: 2rem;
   margin-bottom: 0.75rem;
 `;
 
@@ -33,3 +34,17 @@ export const Tab = styled("span")`
 `;
 
 export const TabPanel = styled("div")``;
+
+export const MobileTabSelector = styled("select")`
+  padding: 1rem;
+  border: 2px solid ${SECONDARY_COLOR};
+  color: ${PRIMARY_COLOR};
+  border-radius: 5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: calc(1rem + 0.5vw);
+  margin-bottom: 1rem;
+  &:focus{
+    outline: none;
+  }
+`;
