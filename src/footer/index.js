@@ -25,7 +25,7 @@ function Footer({ mobile }) {
       <FooterContent mobile={mobile}>
         <FooterColumn>
           <ColumnHeader>About Us</ColumnHeader>
-          <SiteLogo src={SiteLogoLight} />
+          <SiteLogo src={SiteLogoLight} alt="Wheels Logo"/>
           <ContactInfoDesc>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis

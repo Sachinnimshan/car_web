@@ -25,7 +25,7 @@ export const Section = styled("div")`
 
 export const HomeContainer = styled("div")`
   display: flex;
-  background-image: url("/images/home_page.jpg");
+  background-image: url("/images/home_page.webp");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

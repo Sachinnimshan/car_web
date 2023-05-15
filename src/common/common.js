@@ -287,14 +287,14 @@ export const testimonialData = [
   {
     name: "Dan Kaul",
     title: "CEO / Founder",
-    image: "/images/person-1.jpg",
+    image: "/images/person-1.webp",
     message:
       "Phasellus blandit tincidunt nisi nec ultricies. Ut ac condimentum dui. Maecenas sollicitudin magna dolor, eget efficitur metus tristique sed. Mauris sed egestas lorem. Fusce ut volutpat velit, at porta arcu.",
   },
   {
     name: "Saru Matt",
     title: "Planer & Manager",
-    image: "/images/person-2.jpg",
+    image: "/images/person-2.webp",
     message:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales justo in nisi mollis aliquam. Integer congue fringilla cursus. In mi ipsum, consequat non venenatis ut, commodo sed dolor. Aliquam erat volutpat.",
   },

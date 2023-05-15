@@ -37,7 +37,7 @@ function Header({ mobile }) {
       {!showMenu  && (
         <SiteLogo
           src={scrolledDown ? SiteLogoDark : SiteLogoLight}
-          alt="Wheels"
+          alt="Wheels Logo"
         />
       )}
       {!mobile && (
