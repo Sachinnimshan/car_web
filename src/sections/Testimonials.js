@@ -63,9 +63,9 @@ function Testimonials({ mobile }) {
                 <TestimonialItem key={index}>
                   <TestimonialInfoLeft>
                     <TestimonialCommaContainer>
-                      <TestimonialCommas src={QuatationMark} />
+                      <TestimonialCommas src={QuatationMark} alt="Quatation Mark"/>
                     </TestimonialCommaContainer>
-                    <TestimonialProfile src={item?.image} />
+                    <TestimonialProfile src={item?.image} alt="Testimonials"/>
                   </TestimonialInfoLeft>
                   <TestimonialInfoRight>
                     <SectionText color={WHITE_COLOR} italic>

@@ -91,7 +91,7 @@ function About({ mobile, ref }) {
             <AboutRedBannerText>OUR INNOVATIVE DESIGN</AboutRedBannerText>
             <AboutRedBannerText small>Concept Racing Cars</AboutRedBannerText>
           </AboutRedBanner>
-          <AboutVideoImg image={CarSlideImg2}>
+          <AboutVideoImg image={CarSlideImg2} alt="Racing car">
             <PlayButton>
               <PlayIcon />
             </PlayButton>
@@ -103,7 +103,7 @@ function About({ mobile, ref }) {
               return (
                 <Fragment key={index}>
                   {index === currentSlide && (
-                    <SlideShowImg src={carSlideData[index].image} />
+                    <SlideShowImg src={carSlideData[index].image} alt={item.title}/>
                   )}
                 </Fragment>
               );
