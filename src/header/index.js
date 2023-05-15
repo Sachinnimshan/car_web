@@ -15,9 +15,9 @@ function Header({ mobile }) {
   const handleClose = () => setShowMenu(false);
 
   const checkScrolledDown = () => {
-    if (!scrolledDown && window.pageYOffset > 50) {
+    if (!scrolledDown && window.pageYOffset > 20) {
       setScrolledDown(true);
-    } else if (scrolledDown && window.pageYOffset <= 50) {
+    } else if (scrolledDown && window.pageYOffset <= 20) {
       setScrolledDown(false);
     }
   };
@@ -34,7 +34,7 @@ function Header({ mobile }) {
 
   return (
     <HeaderContainer mobile={mobile} scrolledDown={scrolledDown && !showMenu}>
-      {!showMenu && (
+      {!showMenu  && (
         <SiteLogo
           src={scrolledDown ? SiteLogoDark : SiteLogoLight}
           alt="Wheels"
@@ -52,6 +52,7 @@ function Header({ mobile }) {
           showMenu={showMenu}
           scrolledDown={scrolledDown}
           onClose={handleClose}
+          onClick={handleClose}
         />
       )}
       {mobile && !showMenu && (

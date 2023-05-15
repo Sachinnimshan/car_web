@@ -37,7 +37,7 @@ export const HeaderContainer = styled("div")`
   background-color: ${(props) =>
     (props.scrolledDown && WHITE_COLOR) || "transparent"};
   animation-name: ${(props) => props.scrolledDown && headerShowAnimation};
-  animation-duration: 0.5s;
+  animation-duration: 0.3s;
   transition: all ease-in-out 0.5s;
   box-shadow: ${(props) =>
     props.scrolledDown &&
@@ -67,15 +67,6 @@ from {
   }
   to {
     left: 0%;
-  }
-`;
-
-const navbarHideAnimation = keyframes`
-from {
-    left: 0%;
-  }
-  to {
-    left: -100%;
   }
 `;
 
