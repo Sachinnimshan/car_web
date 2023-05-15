@@ -15,10 +15,14 @@ import {
   SocialIcon,
 } from "./header.styled";
 
-function Navigation({ scrolledDown, showMenu, onClose }) {
+function Navigation({
+  scrolledDown,
+  showMenu,
+  onClose,
+}) {
   return (
-    <NavigationContainer >
-      <NavItemContainer showMenu={showMenu} >
+    <NavigationContainer>
+      <NavItemContainer showMenu={showMenu}>
         {showMenu && (
           <SidebarHeader>
             <SiteLogo src={SiteLogoDark} />
@@ -29,7 +33,11 @@ function Navigation({ scrolledDown, showMenu, onClose }) {
         )}
 
         {navLinks?.map((item) => (
-          <NavItem key={item.title} scrolledDown={scrolledDown || showMenu} >
+          <NavItem
+            className="navitem"
+            key={item.title}
+            scrolledDown={scrolledDown || showMenu}
+          >
             {item.title}
           </NavItem>
         ))}

@@ -5,6 +5,7 @@ import { SiteLogo } from "../images/images.styled";
 import { SiteLogoDark, SiteLogoLight } from "../images";
 import Navigation from "./Navigation";
 import { MenuIcon } from "../icons";
+import { navLinks } from "../common/common";
 
 function Header({ mobile }) {
   const [scrolledDown, setScrolledDown] = useState(false);

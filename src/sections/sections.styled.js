@@ -16,6 +16,11 @@ export const MainLayoutContainer = styled("div")`
   flex-direction: column;
 `;
 
+export const Section = styled("div")`
+  display: flex;
+  flex-direction: column;
+`;
+
 //////////////////HOME//////////////////////////////////////////////////////////
 
 export const HomeContainer = styled("div")`
@@ -36,7 +41,7 @@ export const HomeContainer = styled("div")`
 
 export const carAnimation = keyframes`
  from {
-    right: -5%;
+    right: -100%;
   }
   to {
     right: 0%;
@@ -45,8 +50,13 @@ export const carAnimation = keyframes`
 
 export const HeroBanner = styled("div")`
   z-index: 5;
-  animation-name: ${carAnimation};
-  animation-duration: 1s;
+  overflow: hidden;
+`;
+
+export const HomeBanner = styled("img")`
+  width: 100%;
+  animation: ${carAnimation} 2s;
+  height: 100%;
   position: relative;
 `;
 
@@ -146,6 +156,7 @@ export const AboutContainer = styled("div")`
   padding: ${(props) =>
     props.mobile ? `1rem ${PADDING_MOBILE}` : `1rem ${PADDING_DESKTOP}`};
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -186,6 +197,12 @@ export const AboutRedBanner = styled("div")`
   flex-direction: column;
   align-items: flex-start;
   padding: 2rem;
+`;
+
+export const AboutBanner = styled("img")`
+  max-width: 650px;
+  width: 100%;
+  height: 100%;
 `;
 
 export const AboutRedBannerText = styled("span")`
@@ -233,13 +250,26 @@ export const AboutBottomRight = styled("div")`
 
 export const AboutSlideContainer = styled("div")`
   position: relative;
+  overflow: hidden;
 `;
+
+export const slideShowAnimation = keyframes`
+ from {
+    opacity: 0.5;
+    left: -10%;
+  }
+  to {
+    opacity: 1;
+    left: 0;
+  }
+  `;
 
 export const SlideShowImg = styled("img")`
   width: 100%;
   flex-grow: 1;
   position: relative;
   transition: all ease-in-out 0.5s;
+  animation: ${slideShowAnimation} 1.5s;
 `;
 
 export const AboutInfoBottom = styled("div")`
@@ -395,13 +425,26 @@ export const TestimonialItemContainer = styled("div")`
   gap: 3rem;
 `;
 
+export const testimonialAnimation = keyframes`
+ from {
+    opacity: 0.5;
+    left: -10%;
+  }
+  to {
+    opacity: 1;
+    left: 0;
+  }
+  `;
+
 export const TestimonialItem = styled("div")`
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 3rem;
-  justify-content: space-between;
+  position: relative;
   transition: all ease-in-out 0.5s;
+  animation: ${testimonialAnimation} 2s;
 `;
 
 export const TestimonialInfoLeft = styled("div")`

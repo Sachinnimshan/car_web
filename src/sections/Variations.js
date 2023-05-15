@@ -14,7 +14,7 @@ import {
   VariationsContainer,
 } from "./sections.styled";
 
-function Variations({mobile}) {
+function Variations({ mobile }) {
   const carCollection = [
     {
       color: "Red",
@@ -38,7 +38,6 @@ function Variations({mobile}) {
     setSelectedColor(image);
   };
 
- 
   return (
     <VariationsContainer mobile={mobile}>
       <SectionTitleContainer>
@@ -59,7 +58,7 @@ function Variations({mobile}) {
           />
         ))}
       </ColorSelector>
-      <VariationColorCar src={selectedColor} alt="Wheels"/>
+      <VariationColorCar src={selectedColor} alt="Wheels" />
     </VariationsContainer>
   );
 }

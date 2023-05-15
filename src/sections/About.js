@@ -2,8 +2,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import { carSlideData } from "../common/common";
 import SlideControls from "../common/slidecontrols";
 import { PlayIcon } from "../icons";
-import { AboutImg, CarSlideImg1, CarSlideImg2, CarSlideImg3 } from "../images";
-import { AboutBanner } from "../images/images.styled";
+import { AboutImg, CarSlideImg2 } from "../images";
 import {
   SectionHeader,
   SectionSubTitle,
@@ -13,6 +12,7 @@ import {
   SectionTitleTop,
 } from "../styles/typography";
 import {
+  AboutBanner,
   AboutBottomContainer,
   AboutBottomLeft,
   AboutBottomRight,
@@ -28,11 +28,11 @@ import {
   SlideShowImg,
 } from "./sections.styled";
 
-function About({ mobile }) {
+function About({ mobile, ref }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const autoScroll = true;
   let slideTimer;
-  let scrollTimer = 3000;
+  let scrollTimer = 12000;
 
   const handleNext = () => {
     setCurrentSlide(
@@ -59,7 +59,7 @@ function About({ mobile }) {
     };
   }, [currentSlide]);
   return (
-    <AboutContainer mobile={mobile}>
+    <AboutContainer mobile={mobile} ref={ref}>
       <AboutTopSection>
         <AboutBanner src={AboutImg} alt="Wheels" />
         <AboutTopRight>

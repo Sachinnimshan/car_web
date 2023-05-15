@@ -20,27 +20,27 @@ export const socialIcons = [
 export const navLinks = [
   {
     title: "About",
-    ref: "about",
+    ref: "aboutRef",
   },
   {
     title: "Innovative Design",
-    ref: "innovative_design",
+    ref: "aboutRef",
   },
   {
     title: "Variations",
-    ref: "variations",
+    ref: "variationRef",
   },
   {
     title: "Specials",
-    ref: "specials",
+    ref: "technicalRef",
   },
   {
     title: "Testimonial",
-    ref: "testimonials",
+    ref: "testimonialRef",
   },
   {
     title: "Find Dealer",
-    ref: "find_dealer",
+    ref: "dealerRef",
   },
 ];
 

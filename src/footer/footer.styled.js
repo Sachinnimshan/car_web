@@ -86,7 +86,7 @@ export const ContactInfoDesc = styled("p")`
 
 export const CopyRightContainer = styled("div")`
   padding: 2rem 0;
-  font-size: 12.5px;
+  font-size: 12px;
   text-align: center;
   border-top: 1px solid ${FONT_DARK};
   color: ${FONT_LIGHT};

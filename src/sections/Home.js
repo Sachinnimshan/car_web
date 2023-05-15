@@ -1,20 +1,20 @@
 import React from "react";
 import { CarImageRed } from "../images";
-import { HomeBanner } from "../images/images.styled";
 import { BG_COLOR } from "../styles/theme";
 import { HomePageHeader, SectionTitle } from "../styles/typography";
 import {
   FadeText,
   Fog,
   HeroBanner,
+  HomeBanner,
   HomeContainer,
   HomeInfoContainer,
   TypeHightlight,
 } from "./sections.styled";
 
-function Home({ mobile }) {
+function Home({ mobile, ref }) {
   return (
-    <HomeContainer mobile={mobile}>
+    <HomeContainer mobile={mobile} ref={ref}>
       <HomeInfoContainer mobile={mobile}>
         <HomePageHeader>New Collection</HomePageHeader>
         <SectionTitle color={BG_COLOR}>

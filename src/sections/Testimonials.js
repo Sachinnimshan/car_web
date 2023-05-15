@@ -22,7 +22,7 @@ function Testimonials({ mobile }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const autoScroll = true;
   let slideTimer;
-  let scrollTimer = 3000;
+  let scrollTimer = 12000;
 
   const handleNext = () => {
     setCurrentSlide(
@@ -69,7 +69,7 @@ function Testimonials({ mobile }) {
                   </TestimonialInfoLeft>
                   <TestimonialInfoRight>
                     <SectionText color={WHITE_COLOR} italic>
-                      " {item?.message} "
+                    {item?.message}
                     </SectionText>
                     <TestimonialAuthorContainer>
                       <TestimonialAuthor>{item?.name}</TestimonialAuthor>
