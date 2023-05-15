@@ -64,6 +64,7 @@ export const TypeHightlight = styled("span")`
   color: ${SECONDARY_COLOR};
 `;
 
+
 export const FadeText = styled("h1")`
   font-size: calc(16px + 12vw);
   font-weight: 700;
@@ -256,11 +257,11 @@ export const AboutSlideContainer = styled("div")`
 export const slideShowAnimation = keyframes`
  from {
     opacity: 0.5;
-    left: -10%;
+    
   }
   to {
     opacity: 1;
-    left: 0;
+    
   }
   `;
 
@@ -422,17 +423,16 @@ export const TestimonialItemContainer = styled("div")`
   flex-wrap: wrap;
   justify-content: center;
   padding: 2rem 0;
+  overflow: hidden;
   gap: 3rem;
 `;
 
 export const testimonialAnimation = keyframes`
  from {
     opacity: 0.5;
-    left: -10%;
   }
   to {
     opacity: 1;
-    left: 0;
   }
   `;
 

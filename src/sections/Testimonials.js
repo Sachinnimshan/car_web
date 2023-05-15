@@ -22,7 +22,7 @@ function Testimonials({ mobile }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const autoScroll = true;
   let slideTimer;
-  let scrollTimer = 12000;
+  let scrollTimer = 10000;
 
   const handleNext = () => {
     setCurrentSlide(

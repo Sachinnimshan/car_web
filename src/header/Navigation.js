@@ -15,11 +15,7 @@ import {
   SocialIcon,
 } from "./header.styled";
 
-function Navigation({
-  scrolledDown,
-  showMenu,
-  onClose,
-}) {
+function Navigation({ scrolledDown, showMenu, onClose }) {
   return (
     <NavigationContainer>
       <NavItemContainer showMenu={showMenu}>

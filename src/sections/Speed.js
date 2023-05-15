@@ -5,8 +5,10 @@ import {
   SectionText,
   SectionTitle,
 } from "../styles/typography";
+import About from "./About";
 import {
   RedDivider,
+  Section,
   Speedbar,
   SpeedContainer,
   SpeedStatContainer,
@@ -14,9 +16,9 @@ import {
 } from "./sections.styled";
 
 function Speed({mobile}) {
-  const isMobile = useResponsive();
   return (
-    <SpeedContainer mobile={mobile}>
+    <Section>
+      <SpeedContainer mobile={mobile}>
       <SectionTitle>MIND BLOWING SPEED</SectionTitle>
       <SectionText>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In gravida
@@ -38,7 +40,9 @@ function Speed({mobile}) {
           <SectionSubTitle>Range</SectionSubTitle>
         </Speedbar>
       </SpeedStatContainer>
-    </SpeedContainer>
+      </SpeedContainer>
+      <About mobile={mobile}/>
+    </Section>
   );
 }
 

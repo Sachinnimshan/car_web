@@ -12,8 +12,6 @@ import Testimonials from "./Testimonials";
 import Variations from "./Variations";
 
 function MainLayout({ mobile }) {
-  const [loading, setLoading] = useState(false);
-  const scrollRefs = useRef([]);
   const sections = [
     {
       title: "Home",
@@ -21,12 +19,7 @@ function MainLayout({ mobile }) {
     },
     {
       title: "About",
-      component: (
-        <Section>
-          <Speed mobile={mobile} />
-          <About mobile={mobile} />
-        </Section>
-      ),
+      component: <Speed mobile={mobile} />,
     },
     {
       title: "Variations",
@@ -34,25 +27,20 @@ function MainLayout({ mobile }) {
     },
     {
       title: "Technical",
-      component: (
-        <Section>
-          <Technical mobile={mobile} />
-          <Engine mobile={mobile} />
-        </Section>
-      ),
+      component: <Technical mobile={mobile} />,
     },
     {
       title: "Testimonials",
       component: <Testimonials mobile={mobile} />,
     },
   ];
+  const [loading, setLoading] = useState(false);
+  const scrollRefs = useRef([]);
 
   const scrollSmoothHandler = (index) => () => {
-    if (scrollRefs.current) {
-      scrollRefs.current[index].current.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
+    scrollRefs?.current[index]?.current?.scrollIntoView({
+      behavior: "smooth"
+    });
   };
 
   useEffect(() => {
@@ -66,13 +54,16 @@ function MainLayout({ mobile }) {
       });
       setLoading(true);
     }
+    return () => {
+      setLoading(false);
+    };
   }, [loading]);
 
   return (
     <MainLayoutContainer>
       <Header mobile={mobile} />
       {sections?.map((item, index) => (
-        <Section key={index} ref={scrollRefs.current[index]}>
+        <Section key={index} ref={scrollRefs?.current[index]}>
           {item?.component}
         </Section>
       ))}
