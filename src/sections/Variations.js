@@ -49,7 +49,7 @@ function Variations({ mobile }) {
       <SectionText>
         Wheels ZQ6 offers you multiple option to choose the color you love.
       </SectionText>
-      <ColorSelector>
+      <ColorSelector mobile={mobile}>
         {carCollection?.map((dot, index) => (
           <ColorDot
             key={dot.color}

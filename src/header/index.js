@@ -22,6 +22,8 @@ function Header({ mobile }) {
     }
   };
 
+  const handleLogoClick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
   useEffect(() => {
     window.addEventListener("scroll", checkScrolledDown);
   }, [window.pageYOffset, scrolledDown]);
@@ -34,10 +36,11 @@ function Header({ mobile }) {
 
   return (
     <HeaderContainer mobile={mobile} scrolledDown={scrolledDown && !showMenu}>
-      {!showMenu  && (
+      {!showMenu && (
         <SiteLogo
           src={scrolledDown ? SiteLogoDark : SiteLogoLight}
           alt="Wheels Logo"
+          onClick={handleLogoClick}
         />
       )}
       {!mobile && (

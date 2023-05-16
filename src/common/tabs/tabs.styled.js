@@ -26,7 +26,7 @@ export const Tab = styled("span")`
   font-size: calc(16px + 0.1vw);
   padding-bottom: 1rem;
   font-weight: 400;
-  color: ${(props) => (props.active ? "#3B3B3B" : FONT_LIGHT)};
+  color: ${(props) => (props.active ? PRIMARY_COLOR : FONT_LIGHT)};
   cursor: pointer;
   transition: all ease-in-out 0.5s;
   border-bottom: ${(props) =>

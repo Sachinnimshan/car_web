@@ -299,3 +299,72 @@ export const testimonialData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales justo in nisi mollis aliquam. Integer congue fringilla cursus. In mi ipsum, consequat non venenatis ut, commodo sed dolor. Aliquam erat volutpat.",
   },
 ];
+
+export const dealerData = {
+  countries: [
+    {
+      title: "Country 1",
+      id: 1,
+    },
+    {
+      title: "Country 2",
+      id: 2,
+    },
+    {
+      title: "Country 3",
+      id: 3,
+    },
+    {
+      title: "Country 4",
+      id: 4,
+    },
+    {
+      title: "Country 5",
+      id: 5,
+    },
+  ],
+  state: [
+    {
+      title: "State 1",
+      id: 1,
+    },
+    {
+      title: "State 2",
+      id: 2,
+    },
+    {
+      title: "State 3",
+      id: 3,
+    },
+    {
+      title: "State 4",
+      id: 44,
+    },
+    {
+      title: "State 5",
+      id: 5,
+    },
+  ],
+  cities: [
+    {
+      title: "City 1",
+      id: 1,
+    },
+    {
+      title: "City 2",
+      id: 2,
+    },
+    {
+      title: "City 3",
+      id: 3,
+    },
+    {
+      title: "City 4",
+      id: 44,
+    },
+    {
+      title: "City 5",
+      id: 5,
+    },
+  ],
+};

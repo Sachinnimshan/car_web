@@ -3,6 +3,7 @@ import { MdHdrOffSelect } from "react-icons/md";
 import Footer from "../footer";
 import Header from "../header";
 import About from "./About";
+import Dealer from "./Dealer";
 import Engine from "./Engine";
 import Home from "./Home";
 import { MainLayoutContainer, Section } from "./sections.styled";
@@ -33,13 +34,17 @@ function MainLayout({ mobile }) {
       title: "Testimonials",
       component: <Testimonials mobile={mobile} />,
     },
+    {
+      title: "Find Dealer",
+      component: <Dealer mobile={mobile} />,
+    },
   ];
   const [loading, setLoading] = useState(false);
   const scrollRefs = useRef([]);
 
   const scrollSmoothHandler = (index) => () => {
     scrollRefs?.current[index]?.current?.scrollIntoView({
-      behavior: "smooth"
+      behavior: "smooth",
     });
   };
 

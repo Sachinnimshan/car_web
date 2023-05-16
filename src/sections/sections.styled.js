@@ -64,7 +64,6 @@ export const TypeHightlight = styled("span")`
   color: ${SECONDARY_COLOR};
 `;
 
-
 export const FadeText = styled("h1")`
   font-size: calc(16px + 12vw);
   font-weight: 700;
@@ -146,6 +145,7 @@ export const RedDivider = styled("div")`
 
 export const StatValue = styled("span")`
   font-weight: 700;
+  color: ${PRIMARY_COLOR};
   font-size: calc(16px + 2vw);
 `;
 
@@ -256,7 +256,7 @@ export const AboutSlideContainer = styled("div")`
 
 export const slideShowAnimation = keyframes`
  from {
-    opacity: 0.5;
+    opacity: 0.25;
     
   }
   to {
@@ -298,9 +298,9 @@ export const VariationColorCar = styled("img")`
 
 export const ColorSelector = styled("div")`
   display: flex;
-  flex-direction: row;
+  flex-direction: ${(props) => (props.mobile ? "row" : "column")};
   gap: 0.75rem;
-  justify-content: center;
+  justify-content: flex-end;
   margin-top: 1rem;
 `;
 
@@ -391,12 +391,12 @@ export const EngineSpecItem = styled("div")`
 export const EngineSpecValue = styled("span")`
   font-size: calc(16px + 1.5vw);
   font-weight: 700;
-  color: "#3B3B3B";
+  color: ${PRIMARY_COLOR};
 `;
 
 export const EngineSpecTitle = styled("span")`
   font-size: calc(16px + 0.2vw);
-  color: "#3B3B3B";
+  color: ${PRIMARY_COLOR};
   text-transform: uppercase;
 `;
 
@@ -498,3 +498,40 @@ export const AuthorTitle = styled("span")`
 `;
 
 //////////////////TESTIMONIALS//////////////////////////////////////////////////////////
+
+//////////////////FIND DEALER//////////////////////////////////////////////////////////
+
+export const DealerContainer = styled("div")`
+  display: flex;
+  flex-direction: column;
+  padding: ${(props) =>
+    props.mobile ? `2rem ${PADDING_MOBILE}` : `2rem ${PADDING_DESKTOP}`};
+`;
+
+export const SearchContainer = styled("div")`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0;
+  flex-wrap: ${(props) => props.mobile && "wrap"};
+`;
+
+export const SubmitButton = styled("div")`
+  border-radius: 4rem;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: calc(1rem + 0.2vw);
+  font-weight: 600;
+  cursor: pointer;
+  color: ${WHITE_COLOR};
+  flex: 1;
+  background-color: ${PRIMARY_COLOR};
+  border: 3px solid ${PRIMARY_COLOR};
+  &:hover {
+    background-color: ${WHITE_COLOR};
+    border: 3px solid ${PRIMARY_COLOR};
+    color: ${PRIMARY_COLOR};
+  }
+`;
+
+///////////////////FIND DEALER//////////////////////////////////////////////////////////
