@@ -17,6 +17,7 @@ export const SelectBoxContainer = styled("select")`
   color: ${FONT_DARK};
   padding-right: 1rem;
   appearance: none;
+  display: flex;
   background-image: url("/images/downdown.png");
   background-repeat: no-repeat;
   background-position: calc(100% - 1rem) center;

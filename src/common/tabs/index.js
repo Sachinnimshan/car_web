@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import useResponsive from "../../hooks/useResponsive";
 import {
   MobileTabSelector,
@@ -10,34 +10,20 @@ import {
 
 function Tabs({ data, children, activeTab, setActiveTab }) {
   const mobile = useResponsive();
-  
+
   return (
     <TabContainer>
-      {mobile ? (
-        <MobileTabSelector>
-          {data?.map((tab, index) => (
-            <option
-              key={tab?.title}
-              value={tab?.title}
-            >
-              {tab?.title}
-            </option>
-          ))}
-        </MobileTabSelector>
-      ) : (
-        <TabHeader mobile={mobile}>
-          {data?.map((tab) => (
-            <Tab
-              onClick={() => setActiveTab(tab)}
-              active={activeTab === tab}
-              key={tab?.title}
-            >
-              {tab?.title}
-            </Tab>
-          ))}
-        </TabHeader>
-      )}
-
+      <TabHeader mobile={mobile}>
+        {data?.map((tab, index) => (
+          <Tab
+            onClick={() => setActiveTab(tab)}
+            active={activeTab === tab}
+            key={index}
+          >
+            {tab?.title}
+          </Tab>
+        ))}
+      </TabHeader>
       <TabPanel>{children}</TabPanel>
     </TabContainer>
   );

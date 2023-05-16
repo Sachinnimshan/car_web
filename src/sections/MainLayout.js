@@ -47,9 +47,8 @@ function MainLayout({ mobile }) {
       behavior: "smooth",
     });
   };
-
+  const navLinksArray = document.querySelectorAll(".navitem");
   useEffect(() => {
-    const navLinksArray = document.querySelectorAll(".navitem");
     if (!loading) {
       scrollRefs.current = [...Array(navLinksArray?.length).keys()].map(
         (item, index) => scrollRefs.current[index] ?? createRef()
@@ -59,10 +58,10 @@ function MainLayout({ mobile }) {
       });
       setLoading(true);
     }
-    return () => {
+    return ()=>{
       setLoading(false);
-    };
-  }, [loading]);
+    }
+  }, []);
 
   return (
     <MainLayoutContainer>

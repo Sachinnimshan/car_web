@@ -21,6 +21,8 @@ import {
 
 function Engine({ mobile }) {
   const [activeTab, setActiveTab] = useState(engineData[0]);
+
+  //alert(selectedOption);
   return (
     <EngineContainer mobile={mobile}>
       <EngineLeft>
@@ -48,7 +50,7 @@ function Engine({ mobile }) {
           </EngineSpecContainer>
         </Tabs>
       </EngineLeft>
-      <EngineImage src={EngineImg} alt="Engine"/>
+      <EngineImage src={EngineImg} alt="Engine" />
     </EngineContainer>
   );
 }

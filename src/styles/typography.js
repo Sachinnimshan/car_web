@@ -10,7 +10,7 @@ export const SectionHeader = styled("span")`
 
 export const SectionTitle = styled("span")`
   font-weight: 700;
-  font-size: calc(1rem + 4vw);
+  font-size: calc(1rem + 3vw);
   color: ${(props) => props.color || PRIMARY_COLOR};
   text-transform: uppercase;
 `;
