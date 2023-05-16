@@ -513,15 +513,17 @@ export const SearchContainer = styled("div")`
   align-items: center;
   gap: 1rem;
   padding: 2rem 0;
-  flex-wrap: ${(props) => props.mobile && "wrap"};
+  flex-wrap: wrap;
 `;
 
 export const SubmitButton = styled("div")`
   border-radius: 4rem;
   padding: 15px 20px;
   text-align: center;
+  min-width: 200px;
   font-size: calc(1rem + 0.2vw);
   font-weight: 600;
+  flex: 1;
   cursor: pointer;
   color: ${WHITE_COLOR};
   flex: 1;

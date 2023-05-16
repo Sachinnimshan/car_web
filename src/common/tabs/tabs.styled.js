@@ -18,13 +18,13 @@ export const TabHeader = styled("div")`
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
-  gap: 2rem;
+  column-gap: 2rem;
   margin-bottom: 0.75rem;
 `;
 
 export const Tab = styled("span")`
   font-size: calc(16px + 0.1vw);
-  padding-bottom: 1rem;
+  padding: 0.5rem 0;
   font-weight: 400;
   color: ${(props) => (props.active ? PRIMARY_COLOR : FONT_LIGHT)};
   cursor: pointer;

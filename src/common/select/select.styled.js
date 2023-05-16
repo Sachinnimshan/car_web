@@ -12,6 +12,7 @@ export const SelectBoxContainer = styled("select")`
   padding: 15px 20px;
   cursor: pointer;
   flex: 1;
+  min-width: 200px;
   border: 2px solid ${FONT_LIGHT};
   font-size: calc(1rem + 0.2vw);
   color: ${FONT_DARK};
@@ -30,4 +31,3 @@ export const SelectBoxContainer = styled("select")`
     font-size: 2rem;
   }
 `;
-
